@@ -4,5 +4,6 @@
 config.log
 
 *.o
+*~
 
-mount-gridfs
+shell

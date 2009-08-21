@@ -1,7 +1,7 @@
 // MongoJS.cpp
 
-#include "MongoJS.h"
-#include "ShellUtils.h"
+#include "wrapper.h"
+#include "utils.h"
 
 #include <iostream>
 

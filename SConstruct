@@ -1,9 +1,9 @@
 # -*- mode: python; -*-
 import os
 
-v8root = "../v8/"
+v8root = "../../v8/"
 if not os.path.exists( v8root ):
-    v8root = "../../v8/"
+    v8root = "../v8/"
 
 env = Environment()
 
@@ -11,8 +11,9 @@ if 'darwin' == os.sys.platform:
     env.Append(CPPPATH=['/opt/local/include'])
     env.Append(LIBPATH=['/opt/local/lib'])
 
+print( v8root )
 env.Append(LIBPATH=[v8root])
-env.Append(CPPPATH=[v8root])
+env.Append(CPPPATH=[v8root+"/include"])
 
 env.Append( CPPFLAGS=" -m32 " )
 
@@ -41,6 +42,6 @@ conf.CheckLib( makeBoost( "system" ) )
 
 env = conf.Finish()
 
-files = [ 'MongoJS.cpp' ]
+files = [ "wrapper.cpp" ]
 
-env.Program( 'shell' , 'shell.cpp' )
+env.Program( "shell" , files + [ "utils.cpp" , "shell.cpp" ] )
