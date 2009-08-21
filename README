@@ -1,9 +1,7 @@
 
-*** THIS IS NOT WORKING AT ALL ***
+The goal is to make a general v8 mongodb driver.
 
-This is just a stub that i'm starting to rip things into.
+Right now all that works is a shell.
 
-It won't compile at all right now.
-
-Stay tuned.
+Not sure where to go from here - so ideas, patches, etc... are welcome.
 
